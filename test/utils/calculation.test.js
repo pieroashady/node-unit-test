@@ -4,6 +4,7 @@ const {
   divide,
   multiply,
   subtract,
+  isOddOrEven,
 } = require("../../src/utils/calculation");
 
 describe("add", () => {
@@ -30,9 +31,20 @@ describe("divide", () => {
   });
 });
 
+describe("isOddOrEven", () => {
+  it("should return odd if number is odd", () => {
+    expect(isOddOrEven(5)).toBe("odd");
+  });
+
+  it("should return even if number is even", () => {
+    expect(isOddOrEven(4)).toBe("even");
+  });
+});
+
 module.exports = {
   add,
   subtract,
   multiply,
   divide,
+  isOddOrEven,
 };
