@@ -4,7 +4,9 @@ const app = express();
 
 app.get("/hello", (req, res) => {
   const addSalary = add(10, 20);
-  res.json({ message: `Hello, world! This is your salary: ${addSalary}` });
+  const header = req.headers["x-huda"];
+
+  res.json({ message: `Hello, world! This is your salary: ${addSalary} header ${header}` });
 });
 
 module.exports = app;
